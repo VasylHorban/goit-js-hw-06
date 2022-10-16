@@ -3,7 +3,9 @@ function getRandomHexColor() {
 }
 
 const changeColorHandler = () => {
-  document.querySelector(".color").textContent = getRandomHexColor()
+  const randomColor = getRandomHexColor()
+  document.querySelector(".color").textContent = randomColor
+  document.body.style.backgroundColor = randomColor
 }
 
 document.querySelector(".change-color").addEventListener("click", changeColorHandler)
